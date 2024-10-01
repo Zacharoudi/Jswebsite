@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>WEBSITE</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            font-size: 32px;
+        }
+
+        .countdown .number {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1;
+            color: #00AEEF;
+        }
+
+        .countdown .label {
+            font-size: 18px;
+            color: #00AEEF;
+            margin-top: 5px;
+        }
+
+        .button-container {
+            margin: 20px 0;
+        }
+
+        .btn-outline-info, .btn-outline-light {
+            font-size: 16px;
+            font-weight: 700;
+            padding: 10px 30px;
+            margin: 5px;
+        }
+
+        .btn-outline-info {
+            color: #00AEEF;
+            border-color: #00AEEF;
+        }
+
+        .btn-outline-light {
+            color: white;
+            border-color: white;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-buttons a {
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+            transition: color 0.3s ease;
+        }
+
+        .social-buttons a:hover {
+            background-color: black;
+        }
+
+        .footer {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: white;
+        }
+
+        .footer .highlight {
+            color: #00AEEF;
+            font-weight: bold;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 500px;
+            width: 100%;
+            color: white;
+            position: relative;
+        }
+
+        .close {
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" >
+        <iframe src="https://www.youtube.com/embed/IWVJq-4zW24?si=TTF3X9t_f8eZxtbD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h1>WEBSITE IS ALMOST READY</h1>
+        <p>Our website is under construction. We'll be here soon with our new awesome.<br>Subscribe to be notified.</p>
+        <div class="countdown" id="countdown">
+            <div>
+                <div class="number" id="days">122</div>
+                <div class="label">Days</div>
+            </div>
+            <div class="separator">|</div>
+            <div>
+                <div class="number" id="hours">20</div>
+                <div class="label">Hours</div>
+            </div>
+            <div class="separator">|</div>
+            <div>
+                <div class="number" id="minutes">41</div>
+                <div class="label">Minutes</div>
+            </div>
+            <div class="separator">|</div>
+            <div>
+                <div class="number" id="seconds">51</div>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+    </br>
+        <div class="button-container">
+            <button type="button" class="btn btn-outline-info">HOME</button>
+            <a href="SubscribeNow.html" target="_blank" class="btn btn-outline-light">SUBSCRIBE NOW</a>
+            <a href="ContactUs.html" target="_blank" class="btn btn-outline-light">CONTACT US</a>
+        </div>
+    </br>
+        <div class="social-buttons">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/?lang=en" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://mail.google.com" target="_blank" title="Gmail"><i class="fab fa-google"></i></a>
+            <a href="https://www.linkedin.com/feed/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+    </br>
+
+        <footer class="footer">
+            Designed by <span class="highlight">BAPPY</span> and developed by <span class="highlight">THEME TURN</span><br>
+            Copyright reserved to both. 2015
+        </footer>
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the modal and load content
+        function openModal(type) {
+            const modal = document.getElementById("modal");
+            const modalBody = document.getElementById("modal-body");
+
+            // Load content based on button clicked
+            if (type === 'subscribe') {
+                modalBody.innerHTML = '<iframe src="SubscribeNow.html" frameborder="0" style="width:100%; height:500px;"></iframe>';
+            } else if (type === 'contact') {
+                modalBody.innerHTML = '<iframe src="ContactUs.html" frameborder="0" style="width:100%; height:500px;"></iframe>';
+            }
+
+            modal.style.display = 'flex';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = 'none';
+        }
+
+        // Countdown script
+        const countdown = () => {
+            const daysEl = document.getElementById("days");
+            const hoursEl = document.getElementById("hours");
+            const minutesEl = document.getElementById("minutes");
+            const secondsEl = document.getElementById("seconds");
+
+            let totalTime = 122 * 24 * 60 * 60 + 20 * 60 * 60 + 41 * 60 + 51;
+
+            const updateCountdown = () => {
+                const days = Math.floor(totalTime / (24 * 60 * 60));
+                const hours = Math.floor((totalTime % (24 * 60 * 60)) / (60 * 60));
+                const minutes = Math.floor((totalTime % (60 * 60)) / 60);
+                const seconds = totalTime % 60;
+
+                daysEl.textContent = days;
+                hoursEl.textContent = hours;
+                minutesEl.textContent = minutes;
+                secondsEl.textContent = seconds;
+
+                totalTime--;
+                if (totalTime < 0) clearInterval(interval);
+            };
+
+            updateCountdown();
+            const interval = setInterval(updateCountdown, 1000);
+        };
+
+        countdown();
+    </script>
+</body>
+
+</html>

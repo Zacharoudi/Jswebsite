@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe Now</title>
+    <style>
+        #success-message {
+            display: none; /* Hide the success message initially */
+            color: black;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mailchimp Embedded Signup Form -->
+    <form id="subscribe-form" action="https://YOUR_MAILCHIMP_URL" method="post" target="_blank">
+        <h2>Subscribe to our Newsletter</h2>
+        <label for="email">Email Address:</label>
+        <input type="email" name="EMAIL" id="email" required>
+        <button type="submit" onclick="handleFormSubmit(event)">Subscribe</button>
+    </form>
+    
+    <!-- Success message -->
+    <p id="success-message">Λάβαμε επιτυχώς το email σας. Σας ευχαριστούμε!</p>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Show the success message
+            document.getElementById("success-message").style.display = "block";
+        }
+    </script>
+</body>
+</html>

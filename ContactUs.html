@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 800px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            width: 48%;
+        }
+        .form-group.full-width {
+            width: 100%;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        select {
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form-group.hidden {
+            display: none;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            aria-live: polite;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <!-- Left Column -->
+    <div class="form-group">
+        <label for="name">ΟΝΟΜΑ</label>
+        <input type="text" id="name" required aria-required="true">
+        <div class="error" id="name-error"></div>
+    </div>
+    <div class="form-group">
+        <label for="surname">ΕΠΩΝΥΜΟ</label>
+        <input type="text" id="surname" required aria-required="true">
+        <div class="error" id="surname-error"></div>
+    </div>
+    <div class="form-group">
+        <label for="street">ΟΔΟΣ</label>
+        <input type="text" id="street" required aria-required="true">
+        <div class="error" id="street-error"></div>
+    </div>
+    <div class="form-group">
+        <label for="number">ΑΡΙΘΜΟΣ</label>
+        <input type="text" id="number" required aria-required="true">
+        <div class="error" id="number-error"></div>
+    </div>
+    <div class="form-group">
+        <label for="city">ΠΟΛΗ</label>
+        <input type="text" id="city" required aria-required="true">
+        <div class="error" id="city-error"></div>
+    </div>
+    <div class="form-group">
+        <label for="region">ΠΕΡΙΟΧΗ</label>
+        <input type="text" id="region" required aria-required="true">
+        <div class="error" id="region-error"></div>
+    </div>
+    <div class="form-group">
+        <label for="status">ΟΙΚ. ΚΑΤΑΣΤΑΣΗ</label>
+        <select id="status" required aria-required="true">
+            <option value="">Επιλέξτε...</option>
+            <option value="single">Ανύπαντρος</option>
+            <option value="married">Παντρεμένος</option>
+        </select>
+        <div class="error" id="status-error"></div>
+    </div>
+    <div class="form-group full-width">
+        <label><input type="checkbox" id="children"> ΤΕΚΝΑ</label>
+    </div>
+    <div class="form-group hidden" id="children-number-group">
+        <label for="children-number">ΑΡΙΘΜΟΣ ΤΕΚΝΩΝ</label>
+        <input type="text" id="children-number">
+        <div class="error" id="children-number-error"></div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="form-group">
+        <label for="dob">ΧΡΟΝΟΛΟΓΙΑ ΓΕΝΝΗΣΗΣ</label>
+        <input type="date" id="dob" required aria-required="true">
+        <div class="error" id="dob-error"></div>
+    </div>
+    <div class="form-group">
+        <label for="gender">ΦΥΛΟ</label>
+        <select id="gender" required aria-required="true">
+            <option value="">Επιλέξτε...</option>
+            <option value="male">ΑΝΔΡΑΣ</option>
+            <option value="female">ΓΥΝΑΙΚΑ</option>
+        </select>
+        <div class="error" id="gender-error"></div>
+    </div>
+    <div class="form-group hidden" id="military-obligation-group">
+        <label for="military">ΣΤΡ. ΥΠΟΧΡΕΩΣΕΙΣ</label>
+        <select id="military">
+            <option value="">Επιλέξτε...</option>
+            <option value="yes">Ναι</option>
+            <option value="no">Όχι</option>
+        </select>
+        <div class="error" id="military-error"></div>
+    </div>
+    <div class="form-group hidden" id="military-year-group">
+        <label for="military-year">ΕΤΟΣ ΑΠΟΛ. ΣΤΡΑΤΟΥ</label>
+        <input type="date" id="military-year">
+        <div class="error" id="military-year-error"></div>
+    </div>
+    <div class="form-group">
+        <label><input type="checkbox" id="credit-cards"> ΠΙΣΤΩΤΙΚΕΣ ΚΑΡΤΕΣ</label>
+    </div>
+    <div class="form-group">
+        <label><input type="checkbox" id="loan"> ΔΑΝΕΙΟ</label>
+    </div>
+    <div class="form-group">
+        <label for="education">ΑΠΟΦΟΙΤΟΣ</label>
+        <select id="education" required aria-required="true">
+            <option value="">Επιλέξτε...</option>
+            <option value="gymnasio">Γυμνάσιο</option>
+            <option value="lykeio">Λύκειο</option>
+            <option value="tel">ΤΕΛ</option>
+            <option value="tei">ΤΕΙ</option>
+            <option value="aei">ΑΕΙ</option>
+        </select>
+        <div class="error" id="education-error"></div>
+    </div>
+    <div class="form-group full-width">
+        <button class="submit-btn" id="submit">ΑΠΟΣΤΟΛΗ</button>
+    </div>
+</div>
+
+<script>
+    // Show/Hide based on checkbox selection
+    document.getElementById('children').addEventListener('change', function() {
+        const childrenGroup = document.getElementById('children-number-group');
+        childrenGroup.classList.toggle('hidden', !this.checked);
+    });
+
+    // Show/Hide Military service based on gender
+    document.getElementById('gender').addEventListener('change', function() {
+        const isMale = this.value === 'male';
+        document.getElementById('military-obligation-group').classList.toggle('hidden', !isMale);
+        document.getElementById('military-year-group').classList.toggle('hidden', !isMale);
+    });
+
+    // Validate form before submission
+    document.getElementById('submit').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        let valid = true;
+
+        // Helper function to validate text fields
+        function validateText(id, errorId, allowNumbers = false) {
+            const value = document.getElementById(id).value.trim();
+            const errorElement = document.getElementById(errorId);
+            if (value === '' || (!allowNumbers && /\d/.test(value))) {
+                errorElement.textContent = 'Παρακαλώ εισάγετε έγκυρη τιμή.';
+                valid = false;
+            } else {
+                errorElement.textContent = '';
+            }
+        }
+
+        // Validate Name, Surname, Street, City, Region (no numbers allowed)
+        validateText('name', 'name-error');
+        validateText('surname', 'surname-error');
+        validateText('street', 'street-error');
+        validateText('city', 'city-error');
+        validateText('region', 'region-error');
+
+        // Validate House Number (must be a positive number)
+        const number = document.getElementById('number').value.trim();
+        if (number === '' || isNaN(number) || Number(number) <= 0) {
+            document.getElementById('number-error').textContent = 'Παρακαλώ εισάγετε έναν έγκυρο αριθμό.';
+            valid = false;
+        } else {
+            document.getElementById('number-error').textContent = '';
+        }
+
+        // Validate Marital Status (must select an option)
+        const status = document.getElementById('status').value;
+        if (status === '') {
+            document.getElementById('status-error').textContent = 'Παρακαλώ επιλέξτε μία κατάσταση.';
+            valid = false;
+        } else {
+            document.getElementById('status-error').textContent = '';
+        }
+
+        // Validate Children Number (if children checkbox is checked)
+        if (document.getElementById('children').checked) {
+            const childrenNumber = document.getElementById('children-number').value.trim();
+            if (childrenNumber === '' || isNaN(childrenNumber) || Number(childrenNumber) <= 0) {
+                document.getElementById('children-number-error').textContent = 'Παρακαλώ εισάγετε έναν έγκυρο αριθμό τέκνων.';
+                valid = false;
+            } else {
+                document.getElementById('children-number-error').textContent = '';
+            }
+        }
+
+        // Validate Date of Birth (Year must be up to 2024)
+    const dob = document.getElementById('dob').value;
+    if (dob) {
+        const selectedYear = new Date(dob).getFullYear();
+        if (selectedYear > 2024) {
+            document.getElementById('dob-error').textContent = 'Η χρονολογία γέννησης πρέπει να είναι μέχρι το 2024.';
+            valid = false;
+        } else {
+            document.getElementById('dob-error').textContent = '';
+        }
+    }
+
+    // Validate Year of Army Discharge (if visible and filled, year must be up to 2030)
+    const militaryYearGroup = document.getElementById('military-year-group');
+    if (!militaryYearGroup.classList.contains('hidden')) {
+        const militaryYear = document.getElementById('military-year').value;
+        if (militaryYear) {
+            const selectedMilitaryYear = new Date(militaryYear).getFullYear();
+            if (selectedMilitaryYear > 2030) {
+                document.getElementById('military-year-error').textContent = 'Το έτος απόλυσης από το στρατό πρέπει να είναι μέχρι το 2030.';
+                valid = false;
+            } else {
+                document.getElementById('military-year-error').textContent = '';
+            }
+        }
+    }
+        // Validate Gender (must select an option)
+        const gender = document.getElementById('gender').value;
+        if (gender === '') {
+            document.getElementById('gender-error').textContent = 'Παρακαλώ επιλέξτε φύλο.';
+            valid = false;
+        } else {
+            document.getElementById('gender-error').textContent = '';
+        }
+
+        // If all validations pass, proceed with form submission or further processing
+        if (valid) {
+            alert('Η φόρμα έχει υποβληθεί επιτυχώς!');
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+h1 {
+    color: blue;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+p {
+    background-color: yellow;
+    border: 1px solid black;
+    padding: 15px;
+    text-align: right;
+    text-align: justify;
+    text-align: center;
+    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#paragraph_1 {
+    border: 10px solid black;
+    padding: 15px;
+    margin: 10px 30px;
+    margin-top: 10px;
+    color: white;
+    text-align: justify;
+    background-color: black !important;
+}
+
+.color_blue {
+    color: blue !important;
+    font-weight: bold;
+}
+
+.background-yellow {
+    background-color: yellow !important;
+}
